@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/homepage.css">
+</head>
+
+<body>
+    <div class="container">
+        <% user.forEach((item)=>{ %>
+        <a class="theseItems" id="<%= item._id %>">
+            <div class="image">
+                <img src="<%= item.imageMain.substr(8) %>" alt="main.jpeg">
+            </div>
+            <div class="text">
+                <h2><%= item.title %></h2>
+            </div>
+            <div class="price-fix">
+                <p><%= item.price %></p>
+                <p><em><%= item.priceFix %></em></p>
+            </div>
+            <hr>
+            <div class="other-items">
+                <div class="bed">
+                    <i class="fas fa-bed"></i>
+                    <p><%= item.bedRoom %></p>
+                </div>
+                <div class="bath">
+                    <i class="fas fa-bath"></i>
+                    <p><%= item.bathRoom %></p>
+                </div>
+                <div class="area">
+                    <i class="fas fa-vector-square"></i>
+                    <p><%= item.area %></p>
+                </div>
+                <% if (item.views) {%>
+                <div class="views">
+                    <i class="fas fa-eye"></i>
+                    <p><%= item.views %></p>
+                </div>
+                <% } %>
+            </div>
+        </a>
+        <% }); %>
+    </div>
+    <% user.forEach((item)=>{ %> 
+        <script>   
+            let obj<%= item._id %> = document.getElementById("<%= item._id %>");
+            obj<%= item._id %>.addEventListener('click', (e)=>{
+                let itemID = obj<%= item._id %>.id;
+                console.log(itemID)
+                window.location.href = `http://localhost:3500/secondpage?id=${itemID}`;
+            });
+    
+        </script>
+        <% }); %>
+</body>
+
+</html>

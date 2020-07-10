@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Insert</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Insert Data to the Database:</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        Title: <input type="text" name="title" class="inputMedium"><br>
+        Price: <input type="text" name="price" class="inputSmall"><br>
+        Price-Fix: <select name="priceFix" value="Negotiable">
+            <option value="Negotiable">Negotiable</option>
+            <option value="Fixed">Fixed</option>
+        </select> <br>
+        Number of BedRooms: <select name="bedRoom" value="1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+        </select> <br>
+        Number of Bathrooms: <select name="bathRoom" value="1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+        </select> <br>
+        Area : <input type="text" name="area"> eg.(0-8-7-6) <br>
+        Address : <input type="text" name="address"> eg. (Jorpati, Nayabasti) <br>
+        Number of Sitting Rooms: <select name="sittingRoom" value="1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+        </select> <br>
+        Number of Kitchen Rooms: <select name="kitchenRoom" value="1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select> <br>
+        Number of Store Rooms: <select name="storeRoom" value="1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select> <br>
+        Floors : <select name="floors" value="1">
+            <option value="1">1</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            <option value="2.5">2.5</option>
+            <option value="3">3</option>
+            <option value="3.5">3.5</option>
+            <option value="4">4</option>
+            <option value="4.5">4.5</option>
+            <option value="5">5</option>
+            <option value="5.5">5.5</option>
+            <option value="6">6</option>
+            <option value="6.5">6.5</option>
+            <option value="7">7</option>
+            <option value="7.5">7.5</option>
+            <option value="8">8</option>
+            <option value="8.5">8.5</option>
+        </select> <br>
+        Parking : <select name="parking" value="1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select> <br>
+        Land Area : <input type="text" name="landArea"> eg. (0-5-9-2) <em>* If not just specify Area</em> <br>
+        Puja Room : <select name="pujaRoom" value="1">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select> <br>
+        Description: <textarea name="description" id="" cols="100" rows="30"></textarea> <br>
+        <br>
+        <strong> Amenities: </strong> <br>
+        <input type="checkbox" name="balcony" value="BALCONY"> BALCONY <br>
+        <input type="checkbox" name="dining" value="DINING"> DINING <br>
+        <input type="checkbox" name="modularKitchen" value="MODULAR KITCHEN"> MODULAR KITCHEN <br>
+        <input type="checkbox" name="tvCable" value="TV CABLE"> TV CABLE <br>
+        <input type="checkbox" name="wifi" value="WIFI"> WIFI <br>
+        <input type="checkbox" name="waterSupply" value="WATER SUPPLY"> WATER SUPPLY <br>
+        <input type="checkbox" name="solar" value="SOLAR"> SOLAR <br>
+        <input type="checkbox" name="waterTank" value="WATER TANK"> WATER TANK <br>
+        <br>
+        Location: <br>
+        <div class="subMenu">
+            Latitude: <input type="text" name="latitude">  <br>
+            Longitude: <input type="text" name="longitude">  <br>
+        </div>
+        Images : <br>
+        Main Image : <input type="file" name="imageMain"><br><br>
+        Gallery : <input type="file" name="gallery" multiple><br><br>
+        <button type="submit">Sumbit</button><br><br>
+    </form>
+</body>
+</html>

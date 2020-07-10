@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= result.title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <style>
+        .breakpoint {
+            max-width: 100vw;
+            height: 10vh;
+        }
+
+        .content-box {
+            width: 90vw;
+            height: 70vh;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .content-box p,
+        .content-box i {
+            color: black;
+        }
+
+        .content-box i {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .ad-title {
+            width: 50%;
+            padding-top: 3rem;
+        }
+
+        .ad-title-pin {
+            display: flex;
+            flex-flow: row wrap;
+            height: 5rem;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .ad-title-pin i,
+        .ad-title-phone i {
+            padding-right: 3rem;
+        }
+
+        .ad-title-phone {
+            display: flex;
+            flex-flow: row wrap;
+            height: 5rem;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .ad-title-btn {
+            display: flex;
+            flex-flow: row wrap;
+            height: 8rem;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .ad-title-btn button,
+        .ad-price-btn button {
+            padding: 0.5rem 1rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .ad-title h1 {
+            color: var(--primary-color);
+            font-size: 3rem;
+        }
+
+        .ad-price {
+            width: 50%;
+            padding-left: 5rem;
+            padding-top: 5rem;
+        }
+
+        .ad-price h1 {
+            font-size: 2.5rem;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="breakpoint"></div>
+    <div class="content-box">
+        <div class="ad-title">
+            <h1><%= result.title %> </h1>
+            <div class="ad-title-pin">
+                <i class="fas fa-map-marker-alt"></i>
+                <p><%= result.address %></p>
+            </div>
+            <div class="ad-title-phone">
+                <i class="fas fa-phone-alt"></i>
+                <p>9810222272</p>
+            </div>
+            <div class="ad-title-btn">
+                <button>Bedroom: <%= result.bedRoom %></button>
+                <button>Bathroom: <%= result.bathRoom %></button>
+                <button>Living: <%= result.sittingRoom %></button>
+                <button>Kitchen: <%= result.kitchenRoom %></button>
+                <button>Store Room: <%= result.storeRoom %></button>
+                <button>Floors: <%= result.floors %></button>
+                <button>Parking: <%= result.parking %></button>
+                <button>Area: <%= result.area %></button>
+                <button>Land Area: <%= result.area %></button>
+            </div>
+        </div>
+        <div class="ad-price">
+            <h1><%= result.price %></h1><br>
+            <p>Three Crore Seventy Five Lakhs Only</p><br>
+            <div class="ad-price-btn">
+                <button>For Sale</button>
+                <% if (result.priceFix === 'Negotiable') {%>
+                <button>Negotiable</button>
+                <% } else{ %> 
+                <button>Fixed</button> 
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

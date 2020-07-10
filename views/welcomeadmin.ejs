@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin CPanel</title>
+    <style>
+        a{
+            padding: 1rem 1.5rem;
+            background-color: grey;
+            color: black;
+            text-decoration: none;
+        }
+        .adminarea{
+            display: flex;
+            flex-flow: row wrap;
+            width: 50vw;
+            justify-content: space-between;
+            
+        }
+        .submission{
+            margin-top: 2rem;
+            padding: 1rem 1.5rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome Admin : CPanel</h1>
+    <h2>What do you want to Perform?
+    </h2>
+    <br><br>
+    <form action="" method="POST" action="">
+        <div class="adminarea">
+            <a href="/adminloginpage/welcomeadmin/create" name="creation">Create</a>
+            <a href="/adminloginpage/welcomeadmin/delete" name="deletion">Delete</a>
+            <a href="/adminloginpage/welcomeadmin/update" name="update">Update</a>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    list-style: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --primary-color: #39145d;
+    --secondary-color: #eff6fd;
+    --tertiary-color : #a7cef8;
+}
+.top-container{
+    max-width: 100vw;
+    height: 80vh;
+    
+}
+.image-container{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("/images/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    flex-flow: column wrap;
+    
+}
+.nav-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    background-color: var(--primary-color);
+    position: fixed;
+    z-index: 20;
+}
+.company-logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-size: x-large;
+}
+.company-logo a{
+    color: white;
+}
+
+.nav-links{
+    width: 80%;
+    height: 100%;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-around;
+   align-items: center;
+}
+.nav-links  i{
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.5);
+    margin-right: 0.5rem;
+}
+.nav-links li a{
+    color: rgba(255,255,255,1);
+    transition: 0.5s ease;
+}
+.navs{
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    align-items: center;
+}
+.nav-links-link a:after{
+    content: '';
+    display: block;
+    transform: scaleX(0);
+    border-bottom: 1px solid white;
+    transition: 0.3s ease;
+    
+}
+.nav-links-link a:hover:after{
+    transform: scaleX(1);
+}
+.nav-links-link a:hover{
+    color: rgba(255,255,255,0.8);
+}
+.lines{
+    display: none;
+}
+.text-container{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    line-height: 2;
+    transform: translateY(45%);
+}
+.text-container h1{
+    color: rgba(255,255,255,1);
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+}
+.text-container p {
+    font-size: 1.5rem;
+    color: rgba(255,255,255,1);
+}
+.text-container small{
+    color: white;
+    transform: translateX(200%);
+}
+.absolute-navs{
+    display:none;
+}
+.arrow-up{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+    transition: all 0.1s ease;
+}
+.arrow-up:hover{
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--primary-color);
+}
+.fa-arrow-up{
+    font-size: 1.2rem;
+    color: rgba(0,0,0,0.8);
+    transition: 0.1s ease;
+}
+.arrow-up:hover .fa-arrow-up{
+    font-size: 1.5rem;
+    color: white;
+}
+.breakpoint{
+    max-width: 100vw;
+    height: 10vh;
+}
+
+/* Responsive */
+
+@media screen and ( max-width: 992px){
+    /* For Navigation Menu */
+    .navs{
+        display: none;
+    }
+    .nav-links{
+       justify-content: flex-end;
+       width: 20%;
+    }
+    .company-logo{
+        width: 60%;
+        margin-left: 1rem;
+    }
+    .lines{
+        display: flex;
+        flex-flow: column wrap;
+        height: 100%;
+        justify-content: center;
+        margin-right: 1.5rem;
+        cursor: pointer;
+    }
+    .line{
+        width: 1.5rem;
+        height: 0.08rem;
+        background-color: white;
+    }
+    .line1{
+        margin-bottom: 0.3rem;
+        transition: 0.3s ease;
+    }
+    .line1-open{
+         transform-origin: left;
+        transform: rotate(30deg);
+    }
+    .line2{
+        margin-bottom: 0.3rem;
+    }
+    .line2-open{
+        visibility: hidden;
+    }
+    .line3{
+        transition: 0.3s ease;
+    }
+    .line3-open{
+         transform-origin: left;
+        transform: rotate(-30deg);
+    }
+    .absolute-navs{
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: block;
+        height: 100vh;
+        width: 0vw;
+        background-color: var(--primary-color);
+        z-index: 10;
+        transition: width 0.3s ease;
+    }
+    .absolute-navs-open{
+        width: 80vw;
+    }
+    .absolute-navs a{
+        color: white;
+        font-size: 2.5rem;
+    }
+    .absolute-navs div{
+        position: relative;
+        top: 20%;
+        left: 10%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: baseline;
+        padding-bottom: 0.8rem;
+        width: 70%;
+        transition: left 0.3s ease;
+    }
+    .house-wrapper:hover, .land-wrapper:hover, .rent-wrapper:hover, .map-wrapper:hover,
+     .services-wrapper:hover{
+        left: 20%;
+    }
+    .absolute-navs .number{
+        color: rgba(255,255,255,0.5);
+        font-size: 1.5rem;
+        padding-right: 1rem;
+    }
+    
+}
+
+@media screen and (max-width: 535px){
+    /* For Absolute Navigation Numbers */
+     .number{
+        font-size: 1rem;
+    }
+    .absolute-navs a{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 356px){
+    /* For Absolute Navigation Numbers */
+     .number{
+        display: none;
+    }
+    .nav-container{
+        max-width: 100vw;
+    }
+}
+@media screen and (max-width: 270px){
+    /* For Absolute Navigation Numbers */
+    .absolute-navs a{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 300px){
+
+    /* For Navigation Menu */
+    .company-logo{
+        display: none;
+    }
+    .nav-links{
+        width: 100%;   
+     }
+}
+
+@media screen and (max-width: 745px){
+
+    /* For Text Container */
+    .text-container h1{
+        text-align: center;
+    }
+    .text-container p {
+        text-align: center;
+    }
+    .text-container small{
+        color: white;
+        transform: translateX(200%);
+    }
+}
+@media screen and (max-width: 415px){
+    /* For Quotation Only */
+    .text-container p{
+        display: none;
+    }
+    .text-container small{
+        display: none;
+    }
+}
+
+/* For Iphone 4s */
+@media screen and (max-height: 450px){
+    body{
+        overflow-x: hidden;
+    }
+
+}

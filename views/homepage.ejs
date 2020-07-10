@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="/css/navigation.css">
 </head>
 
 <body>
+    <%- include ('partials/homepagenav.ejs') %>
     <div class="container">
         <% user.forEach((item)=>{ %>
         <a class="theseItems" id="<%= item._id %>">

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update/Edit Data</title>
+    <style>
+        .contents {
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Update/Edit Data</h1>
+    <br>
+    <div class="contents">
+        <h2>Found Data: </h2>
+        <img src="<%= result.imageMain.substr(7) %>" width="200px" height="200px" alt="">
+        <br>
+        <h2>Update/Edit Data</h2>
+        
+
+        <!-- Updating Starts here -->
+
+        <form action="" method="POST">
+            The Data's Id is :<input type="text" name="dataId" value="<%= result._id %>"> <br><br>
+            Title: <input type="text" name="title" class="inputMedium" value="<%= result.title %>"><br>
+            Price: <input type="text" name="price" class="inputSmall" value="<%= result.price %>"><br>
+            Price-Fix: <select name="priceFix" value="<%= result.priceFix %>">
+                <option value="Negotiable">Negotiable</option>
+                <option value="Fixed">Fixed</option>
+            </select> <br>
+            Number of BedRooms: <select name="bedRoom" value="<%= result.bedRoom %>">
+                <option value="<%= result.bedRoom %>"><%= result.bedRoom %></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select> <br>
+            Number of Bathrooms: <select name="bathRoom" value="<%= result.bathroom %>">
+                <option value="<%= result.bathRoom %>"><%= result.bathRoom %></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select> <br>
+            Area : <input type="text" name="area" value="<%= result.area %>"> eg.(0-8-7-6) <br>
+            Address : <input type="text" name="address" value="<%= result.address %>"> eg. (Jorpati, Nayabasti) <br>
+            Number of Sitting Rooms: <select name="sittingRoom" value="<%= result.sittingRoom %>">
+                <option value="<%= result.sittingRoom %>"><%= result.sittingRoom %></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select> <br>
+            Number of Kitchen Rooms: <select name="kitchenRoom" value="<%= result.kitchenRoom %>">
+                <option value="<%= result.kitchenRoom %>"><%= result.kitchenRoom %></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select> <br>
+            Number of Store Rooms: <select name="storeRoom" value="<%= result.storeRoom %>">
+                <option value="<%= result.storeRoom %>"><%= result.storeRoom %></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select> <br>
+            Floors : <select name="floors" value="<%= result.floors %>">
+                <option value="<%= result.floors %>"><%= result.floors %></option>
+                <option value="1">1</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2</option>
+                <option value="2.5">2.5</option>
+                <option value="3">3</option>
+                <option value="3.5">3.5</option>
+                <option value="4">4</option>
+                <option value="4.5">4.5</option>
+                <option value="5">5</option>
+                <option value="5.5">5.5</option>
+                <option value="6">6</option>
+                <option value="6.5">6.5</option>
+                <option value="7">7</option>
+                <option value="7.5">7.5</option>
+                <option value="8">8</option>
+                <option value="8.5">8.5</option>
+            </select> <br>
+            Parking : <select name="parking" value="<%= result.parking %>">
+                <option value="<%= result.parking %>"><%= result.parking %></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select> <br>
+            Land Area : <input type="text" name="landArea" value="<%= result.landArea %>"> eg. (0-5-9-2) <em>* If not just specify Area</em> <br>
+            Puja Room : <select name="pujaRoom" value="<%= result.pujaRoom %>">
+                <option value="<%= result.pujaRoom %>"><%= result.pujaRoom %></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select> <br>
+            Description: <textarea name="description" id="" cols="100" rows="30" placeholder="<%= result.description %>"></textarea> <br>
+            <br>
+            <strong> Amenities: </strong> <br>
+            <input type="checkbox" name="balcony" value="BALCONY" <% if (result.balcony === true) { %>checked<% } %>> BALCONY <br>
+            <input type="checkbox" name="dining" value="DINING" <% if (result.dining === true) { %>checked<% } %>> DINING <br>
+            <input type="checkbox" name="modularKitchen" value="MODULAR KITCHEN" <% if (result.modularKitchen === true) { %>checked<% } %>> MODULAR KITCHEN <br>
+            <input type="checkbox" name="tvCable" value="TV CABLE" <% if (result.tvCable === true) { %>checked<% } %>> TV CABLE <br>
+            <input type="checkbox" name="wifi" value="WIFI" <% if (result.wifi === true) { %>checked<% } %>> WIFI <br>
+            <input type="checkbox" name="waterSupply" value="WATER SUPPLY" <% if (result.waterSupply=== true) { %>checked<% } %>> WATER SUPPLY <br>
+            <input type="checkbox" name="solar" value="SOLAR" <% if (result.solar === true) { %>checked<% } %>> SOLAR <br>
+            <input type="checkbox" name="waterTank" value="WATER TANK" <% if (result.waterTank === true) { %>checked<% } %>> WATER TANK <br>
+            <br>
+            Location: <br>
+            <div class="subMenu">
+                Latitude: <input type="text" name="latitude" value="<%= result.latitude %>">  <br>
+                Longitude: <input type="text" name="longitude" value="<%= result.longitude %>">  <br>
+            </div>
+            <button type="submit">Sumbit</button><br><br>
+        </form>
+
+    </div>
+</body>
+
+</html>
